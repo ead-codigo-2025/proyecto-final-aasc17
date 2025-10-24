@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agustina Silva</title>
+  <title>Proyecto 04</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="proyecto">
 
   <header class="navbar">
     <nav class="nav-menu">
@@ -29,32 +29,58 @@
           </div>
         </li>
       </ul>
+      <a href="https://www.instagram.com/thegnarlyflesh?igsh=MWFkMmxnc3hndThybg%3D%3D&utm_source=qr" target="_blank" class="instagram-icon">
+  <img src="images/instagram.ico" alt="Instagram" />
+</a>
+
     </nav>
   </header>
 
+
   <main class="proyecto-contenido">
-    <h1>Sobre Agustina Silva</h1>
-    <p>
-      info
-    </p>
+      <section class="intro">
+  <h1>Me presento</h1>
+  <h2 class="firma-nombre">Agustina Silva</h2>
+</section>
+
+    </section>
   </main>
 
-  <nav class="bottom-nav">
-    <a href="index.html" class="nav-item">Inicio</a>
-    <a href="#menu-proyectos" class="nav-item">Proyectos</a>
-  </nav>
 
-  <div id="menu-proyectos" class="bottom-dropdown">
-    <a href="proyecto01.html">Proyecto 01</a>
-    <a href="proyecto02.html">Proyecto 02</a>
-    <a href="proyecto03.html">Proyecto 03</a>
-    <a href="proyecto04.html">Proyecto 04</a>
-    <a href="proyecto05.html">Proyecto 05</a>
-    <a href="proyecto06.html">Proyecto 06</a>
-    <a href="proyecto07.html">Proyecto 07</a>
-    <a href="proyecto08.html">Proyecto 08</a>
-    <a href="proyecto09.html">Proyecto 09</a>
-    <a href="#" class="cerrar">Cerrar ✕</a>
-  </div>
+  <script>
+    const dropdown = document.querySelector(".dropdown");
+    const dropbtn = document.querySelector(".dropbtn");
+    const menu = document.querySelector(".dropdown-content");
+
+    dropbtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      menu.classList.toggle("show");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!dropdown.contains(e.target)) {
+        menu.classList.remove("show");
+      }
+    });
+  </script>
+
+<nav class="bottom-nav">
+<a href="index.html" class="nav-item">Inicio</a>
+<a href="#menu-proyectos" class="nav-item">Proyectos</a>
+</nav>
+
+<div id="menu-proyectos" class="bottom-dropdown">
+  <a href="proyecto01.html">Proyecto 01</a>
+  <a href="proyecto02.html">Proyecto 02</a>
+  <a href="proyecto03.html">Proyecto 03</a>
+  <a href="proyecto04.html">Proyecto 04</a>
+  <a href="proyecto05.html">Proyecto 05</a>
+  <a href="proyecto06.html">Proyecto 06</a>
+  <a href="proyecto07.html">Proyecto 07</a>
+  <a href="proyecto08.html">Proyecto 08</a>
+  <a href="proyecto09.html">Proyecto 09</a>
+  <a href="#" class="cerrar">Cerrar ✕</a>
+</div>
+
 </body>
 </html>
