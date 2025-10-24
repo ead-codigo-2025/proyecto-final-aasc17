@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto 04</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="proyecto">
+
+  <header class="navbar">
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li class="dropdown">
+          <button class="dropbtn">Proyectos</button>
+          <div class="dropdown-content">
+            <a href="proyecto01.html">Proyecto 01</a>
+            <a href="proyecto02.html">Proyecto 02</a>
+            <a href="proyecto03.html">Proyecto 03</a>
+            <a href="proyecto04.html">Proyecto 04</a>
+            <a href="proyecto05.html">Proyecto 05</a>
+            <a href="proyecto06.html">Proyecto 06</a>
+            <a href="proyecto07.html">Proyecto 07</a>
+            <a href="proyecto08.html">Proyecto 08</a>
+            <a href="proyecto09.html">Proyecto 09</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main class="proyecto-contenido">
+    <section class="intro">
+
+      <h1>TENSIÓN DE LA APERTURA CURVILÍNEA</h1>
+<p>Aquí se explora la forma de llevar a cabo un acto de celebración dirigido a 600 personas. Se busca generar el espacio en el cuál será expuesta la propuesta que brinda el bocado, generando momentos que dan apertura a este brindis. El elemento que ofrece el bocado se concentra dentro del espacio de una circunferencia, este se genera a través de la búsqueda individual realizada para concebir en la forma del regalo que entrega bocado y genera brindis.
+    La propuesta se abre dentro de este círculo que debe ser entregado, ¿Cómo se entregan los bocados dentro de este círculo? ¿Cúal es la forma que ofrece el bocado? esa forma que no lo deja caer, esa forma que permite e incita el agarrar y el comer, esta forma que sigue a la circunferencia de la estructura, que no interfiere con la circunferencia, sino que forma parte de ella y ofrece el bocado, ¿Cuál es esa forma?.</p>
+<p>El modo de exposición de los porta bocados es trabajado desde lo que se quiere proyectar, los momentos de apertura y entrega de este regalo se forman por medio de un conjunto de capas que se desvelan hasta el momento de tomar el porta bocado.</p>
+<div class="imagenes-portabocado">
+  <img src="images/Portabocado1.jpeg" alt="portabocado1">
+  <img src="images/Portabocado.png" alt="portabocado2">
+  <img src="images/Portabocado2.jpeg" alt="portabocado3">
+ </div>
+ <p>La estructura se compone por este círculo trabajado de cartón dúplex haciendo un espesor total de 60 mm, este le da la rigidez para generar una estructura interna de madera y simular de mejor forma esta pieza pensada de madera en su completitud como forma de regalo.
+La estructura interna se compone de tres grandes curvas, una de ellas es una curva uniforme, mientras que las otras dos se curvan desde arriba y llegan abajo de forma más recta, dando paso al lugar de posición del vaso, que queda a presión en esas dos paredes separadas por un espacio de 40mm. La curva superior se separa por 32mm de las otras curvas por cada lado, dándole espacio a dos de los cubos comestibles de 30 x 30 x 30 mm.
+</p>
+ <p>Tanto el tercer cubo como el vaso se sostienen por un recorte plegado de papel en la misma forma, estos van encajados dentro de cortes en la madera, el corte para el tercer cubo es en forma de "V" abierta, permitiendo que estas paredes se abran lo suficiente como para darle una base al cubo como también paredes para que este no se caiga, el cubo debe topar una punta con la curva superior para así estar resguardado por todos sus lados. El recorte de encaje del vaso es un línea recta vertical de 10 mm de largo, permitiendo que el papel quede en posición recta para cubrir y agarrar las paredes del vaso.</p>
+<div class="imagenes-pbcortes">
+  <img src="images/corteportabocado1.jpg" alt="portabocado1">
+  <img src="images/corteportabocado2.jpg" alt="portabocado2">
+ </div>
+ <p>Se prepararon tres bocados para la propuesta, dos salados y uno dulce. Cada uno de los cubos comestibles está hecho de queque, el bocado dulce es queque de vainilla y ambos cubos salados se prepararon con vegetales, zapallo italiano, betarraga, ajo y pimentón rojo, la betarraga y el pimentón dando la pigmentación roja parte de la propuesta de color.</p>
+ <img src="images/bocados.png" alt="bocados">
+<h2>Maqueta previa</h2>
+ <div class="imagenes-portabocadoma">
+  <img src="images/Portabocadomaqueta1.jpeg" alt="portabocadoma1">
+  <img src="images/Portabocadomaqueta2.jpeg" alt="portabocadoma2">
+  <img src="images/Portabocadomaqueta3.jpeg" alt="portabocadoma3">
+  <img src="images/Portabocadomaqueta4.jpeg" alt="portabocadoma4">
+ </div>
+    </section>
+  </main>
+
+
+  <script>
+    const dropdown = document.querySelector(".dropdown");
+    const dropbtn = document.querySelector(".dropbtn");
+    const menu = document.querySelector(".dropdown-content");
+
+    dropbtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      menu.classList.toggle("show");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!dropdown.contains(e.target)) {
+        menu.classList.remove("show");
+      }
+    });
+  </script>
+
+<nav class="bottom-nav">
+<a href="index.html" class="nav-item">Inicio</a>
+<a href="#menu-proyectos" class="nav-item">Proyectos</a>
+</nav>
+
+<div id="menu-proyectos" class="bottom-dropdown">
+  <a href="proyecto01.html">Proyecto 01</a>
+  <a href="proyecto02.html">Proyecto 02</a>
+  <a href="proyecto03.html">Proyecto 03</a>
+  <a href="proyecto04.html">Proyecto 04</a>
+  <a href="proyecto05.html">Proyecto 05</a>
+  <a href="proyecto06.html">Proyecto 06</a>
+  <a href="proyecto07.html">Proyecto 07</a>
+  <a href="proyecto08.html">Proyecto 08</a>
+  <a href="proyecto09.html">Proyecto 09</a>
+  <a href="#" class="cerrar">Cerrar ✕</a>
+</div>
+
+</body>
+</html>

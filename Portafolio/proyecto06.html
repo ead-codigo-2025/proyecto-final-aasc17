@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto 06</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="proyecto">
+
+  <header class="navbar">
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li class="dropdown">
+          <button class="dropbtn">Proyectos</button>
+          <div class="dropdown-content">
+            <a href="proyecto01.html">Proyecto 01</a>
+            <a href="proyecto02.html">Proyecto 02</a>
+            <a href="proyecto03.html">Proyecto 03</a>
+            <a href="proyecto04.html">Proyecto 04</a>
+            <a href="proyecto05.html">Proyecto 05</a>
+            <a href="proyecto06.html">Proyecto 06</a>
+            <a href="proyecto07.html">Proyecto 07</a>
+            <a href="proyecto08.html">Proyecto 08</a>
+            <a href="proyecto09.html">Proyecto 09</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main class="proyecto-contenido">
+    <section class="intro">
+
+      <h1>GEOMETRÍA DE LA MAGNITUD CURVILÍNEA</h1>
+      <div class="imagenes-bosquejos">
+  <img src="images/Bosquejocometa11.jpeg" alt="bosquejos2">
+  <img src="images/Bosquejocometa10.jpeg" alt="bosquejos1">
+  <img src="images/Bosquejocometa8.jpeg" alt="bosquejos3">
+ </div>
+      <p>El Bombus dahlbomii, conocido por su gran tamaño y pelaje denso y esponjoso de color naranja, presenta una apariencia redondeada característica. El diseño de la cometa inspirada en este insecto, se ha centrado en una abstracción que conserva las características esenciales, las cuales se han simplificado y exagerado. Esta simplificación mantiene la identidad del abejorro dentro de un formato aerodinámico, garantizando que la cometa no solo se asemeje a un abejorro, si no que también funcione eficazmente en el vuelo.
+      </p>
+      <p>Para capturar la apariencia redondeada del abejorro, atribuída principalmente a su pelaje voluminoso, la cometa utiliza una estructura curvilínea que emula su forma robusta al crear una curva general plana como base, complementada con una elevación central mediante otra curva superpuesta. Esta combinación de curvas crea una ilusión de grosor y tridimensionalidad, imitando el volumen redondo del insecto.</p>
+      <p>La geometría curvilínea del diseño no es solo una elección estética; también optimiza la aerodinámica de la cometa. Las curvas suaves permiten una mejor distribución del flujo del aire, reduciendo la resistencia y aumentando la estabilidad en vuelo. La curvatura central elevada no solo simula el volumen del abejorro, si no que también contribuye a la creación de un perfil aerodinámico eficiente, mejorando la sustentación de la cometa.</p>
+      <h2>Cometa</h2>
+      <div class="imagenes-insectocom">
+  <img src="images/Insectofinal1.png" alt="insectoom1">
+  <img src="images/Insectofinal2.png" alt="insectoom2">
+ </div>
+
+    </section>
+  </main>
+
+
+  <script>
+    const dropdown = document.querySelector(".dropdown");
+    const dropbtn = document.querySelector(".dropbtn");
+    const menu = document.querySelector(".dropdown-content");
+
+    dropbtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      menu.classList.toggle("show");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!dropdown.contains(e.target)) {
+        menu.classList.remove("show");
+      }
+    });
+  </script>
+
+<nav class="bottom-nav">
+<a href="index.html" class="nav-item">Inicio</a>
+<a href="#menu-proyectos" class="nav-item">Proyectos</a>
+</nav>
+
+<div id="menu-proyectos" class="bottom-dropdown">
+  <a href="proyecto01.html">Proyecto 01</a>
+  <a href="proyecto02.html">Proyecto 02</a>
+  <a href="proyecto03.html">Proyecto 03</a>
+  <a href="proyecto04.html">Proyecto 04</a>
+  <a href="proyecto05.html">Proyecto 05</a>
+  <a href="proyecto06.html">Proyecto 06</a>
+  <a href="proyecto07.html">Proyecto 07</a>
+  <a href="proyecto08.html">Proyecto 08</a>
+  <a href="proyecto09.html">Proyecto 09</a>
+  <a href="#" class="cerrar">Cerrar ✕</a>
+</div>
+
+</body>
+</html>

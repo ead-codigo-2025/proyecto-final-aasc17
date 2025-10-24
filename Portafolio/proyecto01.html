@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto 01</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="proyecto">
+
+  <header class="navbar">
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li class="dropdown">
+          <button class="dropbtn">Proyectos</button>
+          <div class="dropdown-content">
+            <a href="proyecto01.html">Proyecto 01</a>
+            <a href="proyecto02.html">Proyecto 02</a>
+            <a href="proyecto03.html">Proyecto 03</a>
+            <a href="proyecto04.html">Proyecto 04</a>
+            <a href="proyecto05.html">Proyecto 05</a>
+            <a href="proyecto06.html">Proyecto 06</a>
+            <a href="proyecto07.html">Proyecto 07</a>
+            <a href="proyecto08.html">Proyecto 08</a>
+            <a href="proyecto09.html">Proyecto 09</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+
+
+  <main class="proyecto-contenido">
+    <section class="intro">
+      <h1>Proyecto de Ornamentación de la Fiesta de San Pedro</h1>
+
+      <img src="images/Botespapudo2024.png" alt="Flor Alstroemeria referencia natural">
+
+      <p>
+        En este proyecto se desarrolla la ornamentación para un bote en la festividad de San Pedro. Para su creación, se investigó una flor autóctona de la región, seleccionando la Alstroemeria como elemento principal. Esta flor se abstrae y se recrea en gran tamaño mediante el uso de alambre y tela, replicando sus características distintivas. La Alstroemeria, junto con las flores elaboradas por el equipo, conforman la ornamentación final del bote. Este proceso integra investigación botánica y técnicas de construcción, resultando en una composición que destaca la flora local y enriquece la celebración cultural.
+      </p>
+
+    </section>
+
+    <section class="contenido">
+      <h2>Festividad de San Pedro y San Pablo</h2>
+      <p>
+        La festividad de San Pedro es especialmente significativa para los pescadores debido a la conexión directa que San Pedro tenía con la pesca antes de convertirse en apóstol de Jesús. Según la doctrina cristiana, Pedro, cuyo verdadero nombre era Simón, era pescador de oficio en el lago de Galilea. Jesús lo encontró a él y a su hermano Andrés mientras estaban pescando y les pidió que lo siguieran, prometiéndoles que se convertirían en "pescadores de hombres". Este llamado es uno de los episodios más emblemáticos en la vida de San Pedro y resalta la importancia de su antiguo oficio.
+      </p>
+
+      <h2>Alstroemeria aurea</h2>
+      <div class="imagenes-dobles">
+  <img src="images/alstroemerianana.jpg" alt="Flor Alstroemeria referencia natural">
+  <img src="images/alstroemeriamama.jpeg" alt="Flor Alstroemeria referencia natural">
+ </div>
+
+      <p>
+        El género Alstroemeria se encuentra presente a lo largo de todo Chile, desde el nivel del mar hasta las altas cumbres cordilleranas, habitando en una gran variedad de ambientes. Muchas de las especies que habitan la zona norte y central de Chile se conocen localmente como “lirio del campo” o “astromelia”, mientras que en la zona sur se les acostumbra llamar “amancay”.
+      </p>
+
+      <h2>Alstroemeria alegórica</h2>
+    <div class="imagenes-dobles alstroemeria-nueva">
+  <img src="images/alstromerianaranja.jpeg" alt="Flor Alstroemeria referencia natural">
+  <img src="images/alstromeriamarilla.jpg" alt="Flor Alstroemeria referencia natural">
+</div>
+
+      <p>
+        
+      </p>
+
+      
+    </section>
+  </main>
+
+
+
+
+  <script>
+    const dropdown = document.querySelector(".dropdown");
+    const dropbtn = document.querySelector(".dropbtn");
+    const menu = document.querySelector(".dropdown-content");
+
+    dropbtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      menu.classList.toggle("show");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!dropdown.contains(e.target)) {
+        menu.classList.remove("show");
+      }
+    });
+  </script>
+
+<nav class="bottom-nav">
+<a href="index.html" class="nav-item">Inicio</a>
+<a href="#menu-proyectos" class="nav-item">Proyectos</a>
+</nav>
+
+<div id="menu-proyectos" class="bottom-dropdown">
+  <a href="proyecto01.html">Proyecto 01</a>
+  <a href="proyecto02.html">Proyecto 02</a>
+  <a href="proyecto03.html">Proyecto 03</a>
+  <a href="proyecto04.html">Proyecto 04</a>
+  <a href="proyecto05.html">Proyecto 05</a>
+  <a href="proyecto06.html">Proyecto 06</a>
+  <a href="proyecto07.html">Proyecto 07</a>
+  <a href="proyecto08.html">Proyecto 08</a>
+  <a href="proyecto09.html">Proyecto 09</a>
+  <a href="#" class="cerrar">Cerrar ✕</a>
+</div>
+
+</body>
+</html>

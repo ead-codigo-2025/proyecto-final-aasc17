@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto 05</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="proyecto">
+
+  <header class="navbar">
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li class="dropdown">
+          <button class="dropbtn">Proyectos</button>
+          <div class="dropdown-content">
+            <a href="proyecto01.html">Proyecto 01</a>
+            <a href="proyecto02.html">Proyecto 02</a>
+            <a href="proyecto03.html">Proyecto 03</a>
+            <a href="proyecto04.html">Proyecto 04</a>
+            <a href="proyecto05.html">Proyecto 05</a>
+            <a href="proyecto06.html">Proyecto 06</a>
+            <a href="proyecto07.html">Proyecto 07</a>
+            <a href="proyecto08.html">Proyecto 08</a>
+            <a href="proyecto09.html">Proyecto 09</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main class="proyecto-contenido">
+    <section class="intro">
+
+      <h1>Bombus Dahlbomii</h1>
+      <img src="images/bombusdalbomiportada.jpg" alt="bombus">
+      <p>Se realizan alegorías de insectos para ser llevadas en el pasacalle Ea[d] 2024, este es el Bombus Dahlbomii, el abejorro gigante patagónico, especie endémica de sudamérica. Luego de analizar la morfología del insecto y sus movimientos más comunes para abstraer sus características principales, mi compañera y yo estuvimos encargadas de la construcción alegórica de este insecto chileno.</p>
+<h2>En proceso</h2>
+      <div class="imagenes-pbcortes">
+  <img src="images/Abejorro_en_proceso.jpg" alt="portabocado1">
+  <img src="images/67f76540-4a05-4724-9679-e1e7441534cf.JPG" alt="portabocado2">
+ </div>
+ <p>Luego de soldar las piezas de alambre se forró con tela la estructura con tela para luego unir las piezas móviles.</p>
+ <h2>Muestra de movimiento</h2>
+ <div class="video-miniatura">
+  <iframe 
+    src="https://www.youtube.com/embed/3P5ziIsgN2Y" 
+    title="Video Bocados"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+</div>
+
+    </section>
+  </main>
+
+
+  <script>
+    const dropdown = document.querySelector(".dropdown");
+    const dropbtn = document.querySelector(".dropbtn");
+    const menu = document.querySelector(".dropdown-content");
+
+    dropbtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      menu.classList.toggle("show");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!dropdown.contains(e.target)) {
+        menu.classList.remove("show");
+      }
+    });
+  </script>
+
+<nav class="bottom-nav">
+<a href="index.html" class="nav-item">Inicio</a>
+<a href="#menu-proyectos" class="nav-item">Proyectos</a>
+</nav>
+
+<div id="menu-proyectos" class="bottom-dropdown">
+  <a href="proyecto01.html">Proyecto 01</a>
+  <a href="proyecto02.html">Proyecto 02</a>
+  <a href="proyecto03.html">Proyecto 03</a>
+  <a href="proyecto04.html">Proyecto 04</a>
+  <a href="proyecto05.html">Proyecto 05</a>
+  <a href="proyecto06.html">Proyecto 06</a>
+  <a href="proyecto07.html">Proyecto 07</a>
+  <a href="proyecto08.html">Proyecto 08</a>
+  <a href="proyecto09.html">Proyecto 09</a>
+  <a href="#" class="cerrar">Cerrar ✕</a>
+</div>
+
+</body>
+</html>

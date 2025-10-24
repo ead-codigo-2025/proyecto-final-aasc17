@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto 03</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="proyecto">
+
+  <header class="navbar">
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li class="dropdown">
+          <button class="dropbtn">Proyectos</button>
+          <div class="dropdown-content">
+            <a href="proyecto01.html">Proyecto 01</a>
+            <a href="proyecto02.html">Proyecto 02</a>
+            <a href="proyecto03.html">Proyecto 03</a>
+            <a href="proyecto04.html">Proyecto 04</a>
+            <a href="proyecto05.html">Proyecto 05</a>
+            <a href="proyecto06.html">Proyecto 06</a>
+            <a href="proyecto07.html">Proyecto 07</a>
+            <a href="proyecto08.html">Proyecto 08</a>
+            <a href="proyecto09.html">Proyecto 09</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+<main class="proyecto-contenido">
+    <section class="intro">
+<h1>LA FORMA A TRAVÉS DE LA TRAMA</h1>
+      <p>
+       Este proyecto tiene como objetivo principal desarrollar letras cúbicas comestibles basadas en la geometría de un cubo, asegurando que cada diseño mantuviera su coherencia estructural dentro de los límites dimensionales establecidos. Este enfoque permite controlar el diseño de las letras dentro de parámetros precisos, asegurando tanto la funcionalidad del molde como la consistencia en la forma final del producto, destacando el uso de mica debido a sus propiedades óptimas para el vaciado de materiales líquidos comestibles, como gelatina o chocolate. 
+      </p>
+    </section>
+
+    <section class="contenido">
+        <h2>Letras</h2>
+      <h3>Letra "N"</h3>
+      <div class="imagenes-n">
+  <img src="images/letraN1.jpg" alt="letran1">
+  <img src="images/letraN2.jpg" alt="letran2">
+ </div>
+
+ <h3>Letra "E"</h3>
+ <div class="imagenes-e">
+  <img src="images/letraE1.jpeg" alt="letrae1">
+  <img src="images/letraE2.jpeg" alt="letrae2">
+ </div>
+
+ <h3>Letra "I"</h3>
+ <div class="imagenes-i">
+  <img src="images/letrai1.jpg" alt="letrai1">
+  <img src="images/letrai2.jpeg" alt="letrai2">
+ </div>
+      <p>
+        Cada letra lleva por fuera una capa delgada de chocolate blanco, primero con el molde abierto se pinta una franja roja de chocolate blanco y colorante alimenticio que sigue una de las extensiones de la letra, luego el molde pintado se mete al refrigerador un minuto, para que esté lo suficientemente frío al momento de verter chocolate blanco dentro del molde, para así evitar que ambos chocolates se mezclen.
+Una vez frío el molde se cierra y se rellena con abundante chocolate blanco, se dan pequeños golpes para asegurar que el chocolate llegue a todas las esquinas y se esperan 30 segundos a que se solidifique el chocolate que roza el frío del molde, luego se voltea y se vuelven a dar pequeños golpes para quitar el exceso de chocolate, este paso se repite una vez más para asegurar una capa de chocolate que no se quiebre al desmoldar.
+El molde se deja en el refrigerador y se hace el ganache de chocolate negro semi amargo. Para realizar el ganache se utilizan 100 gramos de chocolate, y una cucharadita de crema de leche, ambos ingredientes se revuelven en una olla a fuego bajo hasta que se ve una mezcla homogénea. La olla se retira del fuego y se sigue revolviendo hasta que se ve más espesa. En este punto la mezcla fue dividida en tres, el ganache de la letra "N" se combina con mantequilla de maní, la "E" lleva trozos de arroz inflado y la "I" lleva mermelada de mora. Estos complementos buscan añadir un gusto diferente al chocolate, la "E" busca un cambio de la textura al morder, la letra "I" busca un dulzor más frutal y la "N" ocupa la mantequilla de maní para contrarrestar el dulce del chocolate, agregándole un una textura más seca y su sabor más salado.
+</p>
+      <h2>Moldes</h2>
+<div class="imagenes-moldes">
+  <figure>
+    <img src="images/_I_moldee.jpg" alt="moldei">
+    <figcaption>Molde para letra "I"</figcaption>
+  </figure>
+
+  <figure>
+    <img src="images/_E_molde3.jpg" alt="moldee">
+    <figcaption>Molde para letra "E"</figcaption>
+  </figure>
+
+  <figure>
+    <img src="images/nmolde.jpg" alt="molden">
+    <figcaption>Molde para letra "N"</figcaption>
+  </figure>
+</div>
+
+      <p>
+        Para realizar los moldes utilicé mica, ya que el cartón de adhiere a los líquidos, la forma ya hecha con papel se piensa para ser resuelta en mica por medio de cortes y pliegues leves ya que este es un material rígido que suguiere tener una estructura poco compleja, fue utilizada la menor cantidad de cortes posibles para evitar filtraciones.
+      </p>
+    </section>
+  </main>
+
+
+  <script>
+    const dropdown = document.querySelector(".dropdown");
+    const dropbtn = document.querySelector(".dropbtn");
+    const menu = document.querySelector(".dropdown-content");
+
+    dropbtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      menu.classList.toggle("show");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!dropdown.contains(e.target)) {
+        menu.classList.remove("show");
+      }
+    });
+  </script>
+
+<nav class="bottom-nav">
+<a href="index.html" class="nav-item">Inicio</a>
+<a href="#menu-proyectos" class="nav-item">Proyectos</a>
+</nav>
+
+<div id="menu-proyectos" class="bottom-dropdown">
+  <a href="proyecto01.html">Proyecto 01</a>
+  <a href="proyecto02.html">Proyecto 02</a>
+  <a href="proyecto03.html">Proyecto 03</a>
+  <a href="proyecto04.html">Proyecto 04</a>
+  <a href="proyecto05.html">Proyecto 05</a>
+  <a href="proyecto06.html">Proyecto 06</a>
+  <a href="proyecto07.html">Proyecto 07</a>
+  <a href="proyecto08.html">Proyecto 08</a>
+  <a href="proyecto09.html">Proyecto 09</a>
+  <a href="#" class="cerrar">Cerrar ✕</a>
+</div>
+
+</body>
+</html>
