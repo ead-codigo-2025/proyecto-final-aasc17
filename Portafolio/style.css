@@ -22,19 +22,16 @@ body {
 
 .buttons {
   position: relative;
-  width: min(90vw, 700px);
-  height: min(90vw, 700px);
+  width: calc(100vw - 8cm); /* deja 4 cm libres a cada lado */
+  max-width: 900px;
+  height: min(calc(100vw - 8cm), 700px);
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.arco {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
+/* Texto sigue perfectamente centrado */
 .title {
   position: absolute;
   top: 50%;
@@ -44,58 +41,49 @@ body {
   z-index: 2;
 }
 
-.portafolio {
-  font-family: Impact, sans-serif;
-  font-size: clamp(2.5rem, 6vw, 6rem);
-  letter-spacing: 2px;
-  line-height: 1;
+/* Radio base: ajustado para que no choquen entre sí ni los bordes */
+:root {
+  --radio: 55%;
 }
 
-.nombre {
-  font-family: "Imperial Script", cursive;
-  font-size: clamp(2rem, 5vw, 5rem);
-  font-weight: normal;
-}
-
+/* Círculos */
 .circle {
   position: absolute;
-  width: clamp(110px, 15vw, 180px);
-  height: clamp(110px, 15vw, 180px);
+  width: clamp(110px, 14vw, 160px);
+  height: clamp(110px, 14vw, 160px);
   border: 3px solid black;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: Impact, sans-serif;
-  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-size: clamp(2rem, 5vw, 4rem);
   color: black;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
-:root {
-  --radio: 70%;
-}
+/* Distribución curvada, más separada */
+.c9 { top: calc(50% - var(--radio) * 0.42); left: calc(50% + var(--radio) * 0.88); transform: translate(-50%, -50%); }
+.c8 { top: calc(50% - var(--radio) * 0.05); left: calc(50% + var(--radio) * 1.05); transform: translate(-50%, -50%); }
+.c7 { top: calc(50% + var(--radio) * 0.30); left: calc(50% + var(--radio) * 0.83); transform: translate(-50%, -50%); }
 
-.c9 { top: calc(50% - var(--radio) * 0.45); left: calc(50% + var(--radio) * 0.95); transform: translate(-50%, -50%); }
-.c8 { top: calc(50% - var(--radio) * 0.00); left: calc(50% + var(--radio) * 1.18); transform: translate(-50%, -50%); }
-.c7 { top: calc(50% + var(--radio) * 0.35); left: calc(50% + var(--radio) * 0.92); transform: translate(-50%, -50%); }
+.c6 { top: calc(50% + var(--radio) * 0.50); left: calc(50% + var(--radio) * 0.42); transform: translate(-50%, -50%); }
+.c5 { top: calc(50% + var(--radio) * 0.50); left: 50%; transform: translate(-50%, -50%); }
+.c4 { top: calc(50% + var(--radio) * 0.50); left: calc(50% - var(--radio) * 0.42); transform: translate(-50%, -50%); }
 
-.c4 { top: calc(50% + var(--radio) * 0.55); left: calc(50% - var(--radio) * 0.48); transform: translate(-50%, -50%); }
-.c5 { top: calc(50% + var(--radio) * 0.55); left: 50%; transform: translate(-50%, -50%); }
-.c6 { top: calc(50% + var(--radio) * 0.55); left: calc(50% + var(--radio) * 0.48); transform: translate(-50%, -50%); }
-
-.c3 { top: calc(50% + var(--radio) * 0.35); left: calc(50% - var(--radio) * 0.92); transform: translate(-50%, -50%); }
-.c2 { top: calc(50% - var(--radio) * 0.00); left: calc(50% - var(--radio) * 1.18); transform: translate(-50%, -50%); }
-.c1 { top: calc(50% - var(--radio) * 0.45); left: calc(50% - var(--radio) * 0.95); transform: translate(-50%, -50%); }
+.c3 { top: calc(50% + var(--radio) * 0.30); left: calc(50% - var(--radio) * 0.83); transform: translate(-50%, -50%); }
+.c2 { top: calc(50% - var(--radio) * 0.05); left: calc(50% - var(--radio) * 1.05); transform: translate(-50%, -50%); }
+.c1 { top: calc(50% - var(--radio) * 0.42); left: calc(50% - var(--radio) * 0.88); transform: translate(-50%, -50%); }
 
 .circle:hover {
   background-color: black;
   color: white;
-  transform: translate(-50%, -50%) scale(1.1);
+  transform: translate(-50%, -50%) scale(1.08);
 }
 
-@media (max-width: 850px) {
+/* ======== CAMBIO AUTOMÁTICO A COLUMNA ======== */
+@media (max-width: 1150px) {
   .buttons {
     width: 100%;
     height: auto;
@@ -103,19 +91,12 @@ body {
     align-items: center;
   }
 
-  .arco {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5vw;
-  }
-
   .circle {
     position: static;
     transform: none;
-    width: clamp(80px, 20vw, 120px);
-    height: clamp(80px, 20vw, 120px);
-    font-size: clamp(1.5rem, 6vw, 4rem);
+    width: clamp(90px, 22vw, 130px);
+    height: clamp(90px, 22vw, 130px);
+    font-size: clamp(1.5rem, 6vw, 3.5rem);
   }
 
   .title {
@@ -123,6 +104,7 @@ body {
     transform: none;
     margin-bottom: 5vw;
   }
+  
 }
 
 .navbar {
@@ -860,4 +842,15 @@ body.proyecto .proyecto-contenido h2.firma-nombre {
   margin-top: -0.5rem; 
   display: block;
   line-height: 1.1;
+}
+
+/* === Forzar tipografía de PORTAFOLIO === */
+.portafolio {
+  font-family: Impact, sans-serif !important;
+  font-weight: normal !important;
+  font-size: clamp(2.5rem, 6vw, 6rem) !important;
+  letter-spacing: 2px !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+  color: black !important;
 }
