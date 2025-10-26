@@ -10,31 +10,37 @@
 
 <body class="proyecto">
 
-  <header class="navbar">
-    <nav class="nav-menu">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li class="dropdown">
-          <button class="dropbtn">Proyectos</button>
-          <div class="dropdown-content">
-            <a href="proyecto01.html">Proyecto 01</a>
-            <a href="proyecto02.html">Proyecto 02</a>
-            <a href="proyecto03.html">Proyecto 03</a>
-            <a href="proyecto04.html">Proyecto 04</a>
-            <a href="proyecto05.html">Proyecto 05</a>
-            <a href="proyecto06.html">Proyecto 06</a>
-            <a href="proyecto07.html">Proyecto 07</a>
-            <a href="proyecto08.html">Proyecto 08</a>
-            <a href="proyecto09.html">Proyecto 09</a>
-          </div>
-        </li>
-      </ul>
-      <a href="https://www.instagram.com/thegnarlyflesh?igsh=MWFkMmxnc3hndThybg%3D%3D&utm_source=qr" target="_blank" class="instagram-icon">
+<header class="navbar">
+  <nav class="breadcrumb">
+  <a href="index.html">Inicio</a> › 
+  <a href="#">Proyectos</a> › 
+  <span>Proyecto 03</span>
+</nav>
+
+  <nav class="nav-menu">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li class="dropdown">
+        <button class="dropbtn">Proyectos</button>
+        <div class="dropdown-content">
+          <a href="proyecto01.html">Proyecto 01</a>
+          <a href="proyecto02.html">Proyecto 02</a>
+          <a href="proyecto03.html">Proyecto 03</a>
+          <a href="proyecto04.html">Proyecto 04</a>
+          <a href="proyecto05.html">Proyecto 05</a>
+          <a href="proyecto06.html">Proyecto 06</a>
+          <a href="proyecto07.html">Proyecto 07</a>
+          <a href="proyecto08.html">Proyecto 08</a>
+          <a href="proyecto09.html">Proyecto 09</a>
+          <a href="#" class="cerrar">Cerrar ✕</a>
+        </div>
+      </li>
+    </ul>
+    <a href="https://www.instagram.com/thegnarlyflesh?igsh=MWFkMmxnc3hndThybg%3D%3D&utm_source=qr" target="_blank" class="instagram-icon">
   <img src="images/instagram.ico" alt="Instagram" />
 </a>
-
-    </nav>
-  </header>
+  </nav>
+</header>
 
 
   <main class="proyecto-contenido">
@@ -81,6 +87,15 @@
   <a href="proyecto09.html">Proyecto 09</a>
   <a href="#" class="cerrar">Cerrar ✕</a>
 </div>
+
+<script>
+  document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("cerrar")) {
+      const menu = document.querySelector(".dropdown-content");
+      menu.classList.remove("show");
+    }
+  });
+</script>
 
 </body>
 </html>

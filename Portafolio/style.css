@@ -22,7 +22,7 @@ body {
 
 .buttons {
   position: relative;
-  width: calc(100vw - 8cm); /* deja 4 cm libres a cada lado */
+  width: calc(100vw - 8cm); 
   max-width: 900px;
   height: min(calc(100vw - 8cm), 700px);
   margin: 0 auto;
@@ -31,7 +31,6 @@ body {
   align-items: center;
 }
 
-/* Texto sigue perfectamente centrado */
 .title {
   position: absolute;
   top: 50%;
@@ -41,12 +40,10 @@ body {
   z-index: 2;
 }
 
-/* Radio base: ajustado para que no choquen entre sí ni los bordes */
 :root {
   --radio: 55%;
 }
 
-/* Círculos */
 .circle {
   position: absolute;
   width: clamp(110px, 14vw, 160px);
@@ -63,7 +60,6 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Distribución curvada, más separada */
 .c9 { top: calc(50% - var(--radio) * 0.42); left: calc(50% + var(--radio) * 0.88); transform: translate(-50%, -50%); }
 .c8 { top: calc(50% - var(--radio) * 0.05); left: calc(50% + var(--radio) * 1.05); transform: translate(-50%, -50%); }
 .c7 { top: calc(50% + var(--radio) * 0.30); left: calc(50% + var(--radio) * 0.83); transform: translate(-50%, -50%); }
@@ -82,7 +78,6 @@ body {
   transform: translate(-50%, -50%) scale(1.08);
 }
 
-/* ======== CAMBIO AUTOMÁTICO A COLUMNA ======== */
 @media (max-width: 1150px) {
   .buttons {
     width: 100%;
@@ -182,6 +177,56 @@ body {
 .dropdown-content a:hover {
   background-color: #f0f0f0;
 }
+
+/* === Ajuste visual del menú desplegable de proyectos (PC) === */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 220px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Mostrar cuando está activo */
+.dropdown-content.show {
+  display: block;
+}
+
+/* Estilo de los links */
+.dropdown-content a {
+  display: block;
+  padding: 12px 15px;
+  color: black;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  transition: background 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Botón "Cerrar ✕" al final del menú */
+.dropdown-content .cerrar {
+  font-weight: bold;
+  background: black;
+  color: white;
+  border-radius: 0 0 12px 12px;
+  margin-top: 5px;
+}
+
+.dropdown-content .cerrar:hover {
+  background-color: #333;
+}
+
 
 .proyecto-contenido {
   margin-top: 100px;
@@ -844,7 +889,6 @@ body.proyecto .proyecto-contenido h2.firma-nombre {
   line-height: 1.1;
 }
 
-/* === Forzar tipografía de PORTAFOLIO === */
 .portafolio {
   font-family: Impact, sans-serif !important;
   font-weight: normal !important;
@@ -853,4 +897,52 @@ body.proyecto .proyecto-contenido h2.firma-nombre {
   line-height: 1 !important;
   text-transform: uppercase !important;
   color: black !important;
+}
+
+/* ======== BREADCRUMB (migas de pan) ======== */
+.breadcrumb {
+  width: 100%;
+  background: white;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+  color: #555;
+  padding: 0.8rem 4cm;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  top: 0;
+  z-index: 5;
+}
+
+/* enlaces dentro del breadcrumb */
+.breadcrumb a {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: gray;
+}
+
+.breadcrumb span {
+  color: #777;
+}
+
+/* ======== Ajuste PC ======== */
+@media (min-width: 901px) {
+  .breadcrumb {
+    margin-top: 70px; /* 🔹 deja espacio bajo la barra de menú fija */
+  }
+}
+
+/* ======== VERSIÓN MÓVIL ======== */
+@media (max-width: 900px) {
+  .breadcrumb {
+    position: static; /* 🔹 se integra al flujo normal */
+    margin-top: 65px; /* 🔹 justo bajo la barra de menú móvil */
+    padding: 0.8rem 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    z-index: 900;
+  }
 }
