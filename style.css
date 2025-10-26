@@ -856,8 +856,8 @@ body.proyecto .proyecto-contenido h2.firma-nombre {
   font-family: "Imperial Script", cursive !important;
   font-weight: 400;
   text-transform: none;
-  font-size: clamp(3rem, 8vw, 7rem); /* 🔹 más grande que el h1 */
-  margin-top: -0.5rem; /* 🔹 lo acerca al h1 */
+  font-size: clamp(3rem, 8vw, 7rem); 
+  margin-top: -0.5rem; 
   display: block;
   line-height: 1.1;
 }
