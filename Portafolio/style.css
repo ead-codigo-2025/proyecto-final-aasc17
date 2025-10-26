@@ -899,7 +899,6 @@ body.proyecto .proyecto-contenido h2.firma-nombre {
   color: black !important;
 }
 
-/* ======== BREADCRUMB (migas de pan) ======== */
 .breadcrumb {
   width: 100%;
   background: white;
@@ -913,7 +912,6 @@ body.proyecto .proyecto-contenido h2.firma-nombre {
   z-index: 5;
 }
 
-/* enlaces dentro del breadcrumb */
 .breadcrumb a {
   color: #000;
   text-decoration: none;
@@ -928,21 +926,50 @@ body.proyecto .proyecto-contenido h2.firma-nombre {
   color: #777;
 }
 
-/* ======== Ajuste PC ======== */
 @media (min-width: 901px) {
   .breadcrumb {
-    margin-top: 70px; /* 🔹 deja espacio bajo la barra de menú fija */
+    margin-top: 70px; 
   }
 }
 
-/* ======== VERSIÓN MÓVIL ======== */
+.breadcrumb {
+  position: fixed;
+  top: 1px;
+  left: 0;
+  width: 100%;
+  background: white;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+  color: #555;
+  padding: 0.8rem 4cm;
+  border-bottom: 1px solid #ddd;
+  z-index: 999;
+}
+
+.breadcrumb a {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: gray;
+}
+
+.breadcrumb span {
+  color: #777;
+}
+
 @media (max-width: 900px) {
   .breadcrumb {
-    position: static; /* 🔹 se integra al flujo normal */
-    margin-top: 65px; /* 🔹 justo bajo la barra de menú móvil */
+    top: 0; 
     padding: 0.8rem 1.5rem;
-    text-align: center;
     font-size: 0.9rem;
-    z-index: 900;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+
+  body:not(.index) .proyecto-contenido {
+    padding-top: 5rem;
   }
 }
